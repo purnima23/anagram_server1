@@ -1,0 +1,43 @@
+<div class="container">
+  <h1>Welcome to Find Anagram !</h1>
+  <p>Type a word </p>
+
+
+  <form action='/find_anagram' method='post' >
+      <input type="text" name="user_input" placeholder="Enter word"></input>
+      <input type="submit" name="submit"></input>
+    </form>
+
+<h3>Here are the words:</h3>
+<div class="anagram">
+    <%if @word_anagram%>
+    <% @word_anagram.each do |word|%>
+    <p><%=word%></p>
+    <%end%>
+    <%end%>
+  </div>
+</div>
+
+
+<!--
+
+  <table>
+    <tr>
+      <th>File Description</th>
+      <th>File Location</th>
+    </tr>
+    <tr>
+      <td>This view file</td>
+      <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
+    </tr>
+    <tr>
+      <td>The layout file</td>
+      <td><code><%= File.expand_path('../layout.erb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
+    </tr>
+    <tr>
+      <td>The current controller</td>
+      <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
+    </tr>
+  </table>
+</div>
+ -->
